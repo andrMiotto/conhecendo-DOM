@@ -31,7 +31,38 @@ btn_verde.addEventListener('click', () => {
 const btn_fonte = document.getElementById('btn-fonte');
 
 
-btn_azul.addEventListener('click', () => {
+btn_fonte.addEventListener('click', () => {
+
     cartao.classList.toggle('fonte-alternativa');
 });
 
+//4
+const imagem_select = document.getElementById('imagem-select');
+const cartao_imagem = document.getElementById('cartao-img');
+
+imagem_select.addEventListener('change', () => {
+    const icone = imagem_select.value;
+
+
+    cartao_imagem.setAttribute('src', icone);
+
+});
+
+
+// 
+
+
+const habilidade_input = document.getElementById('habilidade-input');
+const lista_habilidades = document.getElementById('lista-habilidades');
+
+
+const btn_adicionar = document.getElementById('btn-adicionar');
+
+btn_adicionar.addEventListener('click', function () {
+    const novoLi = document.createElement('li');
+
+    novoLi.textContent = habilidade_input.value;
+
+    lista_habilidades.appendChild(novoLi);
+
+});
